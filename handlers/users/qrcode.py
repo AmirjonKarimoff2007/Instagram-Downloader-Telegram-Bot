@@ -10,7 +10,6 @@ from aiogram.dispatcher.filters import Text
 
 @dp.message_handler(Text(startswith='https://www'))
 @dp.message_handler(Text(startswith='www'))
-
 async def send_text_based_qr(message: types.Message):
     qr = qrcode.QRCode(version=1,
                        error_correction = qrcode.constants.ERROR_CORRECT_L,
