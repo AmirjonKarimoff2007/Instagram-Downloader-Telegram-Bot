@@ -31,4 +31,5 @@ async def send_text_based_qr(message: types.Message):
     img_byte_array.seek(0)
     
     # Send QR code as a photo in the Telegram chat
-    await message.reply_photo(InputFile(img_byte_array, filename='photo.png'), caption=f'<b>✅ Qr code Tayyor \n\n👉@generate_qr_codes_bot</b>', parse_mode='HTML')
+    await message.reply_document(InputFile(img_byte_array, filename='photo.png'), caption=f'<b>✅ Qr code Tayyor \n\n👉@generate_qr_codes_bot</b>', parse_mode='HTML')
+
